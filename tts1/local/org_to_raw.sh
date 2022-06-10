@@ -20,8 +20,8 @@ do
     if [[ $base == "transcripts" ]]; then
 	continue
     fi
-    ffmpeg-normalize $f -nt rms -o tmp/$base.wav
-    ffmpeg -i tmp/$base.wav -ar 24000 -ac 1 -sample_fmt s16 raw/train/wavs/$base.wav
+    ffmpeg-normalize $f -q -nt rms -o tmp/$base.wav
+    ffmpeg -loglevel error -stats -i tmp/$base.wav -ar 24000 -ac 1 -sample_fmt s16 raw/train/wavs/$base.wav
 done
 
 # split train, eval
