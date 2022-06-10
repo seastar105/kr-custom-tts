@@ -79,7 +79,9 @@ local/data.sh
     --g2p g2pk \
     --cleaner null \
     --stage 2 \
-    --stop-stage 5
+    --stop-stage 5 \
+    "$@"
+
 
 # setup pretrained_model
 local/setup_pretrained_model.sh
@@ -122,4 +124,5 @@ local/setup_pretrained_model.sh
     --train_args "--init_param downloads/imdanboy--kss_tts_train_jets_raw_phn_null_g2pk_train.total_count.ave.main.b059fd8f0fefd7c779cdca610fd29ab7cab692cf/exp/tts_train_jets_raw_phn_null_g2pk/train.total_count.ave_5best.pth:tts:tts" \
     --tag finetune_jets_raw_phn_null_g2pk \
     --train_args "--use_wandb true --wandb_project JHS-finetune-joint-config --wandb_entity seastar105" \
-    --inference_model train.total_count.best.pth
+    --inference_model train.total_count.best.pth \
+    "$@"
