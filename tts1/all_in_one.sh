@@ -4,11 +4,13 @@ set -e
 set -u
 set -o pipefail
 
+echo "<<<<<<<<<< Data Processing, org to kaldi format >>>>>>>>>>"
 # data prep
 local/data.sh
 
 if [ -z ${expdir+x} ]; then expdir=exp; fi
 
+echo "<<<<<<<<<< Data Processing, dump data >>>>>>>>>>"
 # data -> dump
 ./run.sh \
     --tts_task gan_tts \
@@ -27,9 +29,11 @@ if [ -z ${expdir+x} ]; then expdir=exp; fi
     --stop-stage 5 \
     --expdir ${expdir}
 
+echo "<<<<<<<<<< Download Pretrained KSS Model >>>>>>>>>>"
 # setup pretrained_model
 local/setup_pretrained_model.sh
-
+ 
+echo "<<<<<<<<<< Start Finetuning >>>>>>>>>>"
 # start train
 ./run.sh \
     --tts_task gan_tts \
