@@ -11,7 +11,7 @@ for line in open(script_file, 'rt'):
 cnt = 5
 train_scripts, eval_scripts = transcripts[cnt:-cnt], transcripts[:cnt]+transcripts[-cnt:]
 
-
+open('raw/train/transcripts.txt', 'w').write('\n'.join(train_scripts))
 open('raw/eval/transcripts.txt', 'w').write('\n'.join(eval_scripts))
 os.makedirs('raw/eval/wavs', exist_ok=True)
 

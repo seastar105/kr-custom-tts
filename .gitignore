@@ -1,1 +1,5 @@
 tts1/org/*.wav
+tts1/data
+tts1/raw
+tts1/dump
+tts1/exp

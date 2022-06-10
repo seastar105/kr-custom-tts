@@ -20,7 +20,7 @@ def save_wav_scp(base, utts, wavs):
 def save_text(base, utts, texts):
     lines = []
     for utt, text in zip(utts, texts):
-        lines.append(str(utt) + ' ' + str(wav))
+        lines.append(str(utt) + ' ' + str(text))
     open(os.path.join(base, 'text'), 'w').write('\n'.join(lines))
 
 def save_utt2spk(base, utts, spk_id):

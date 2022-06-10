@@ -6,7 +6,8 @@ set -o pipefail
 
 # org -> raw/train
 mkdir -p tmp
-mkdir -p raw/train
+mkdir -p raw/train/wavs
+cp org/transcripts.txt raw/train/
 
 # normalize and resample
 for f in org/*;
@@ -16,7 +17,7 @@ do
     if [[ $base == "spk_id" ]]; then
         continue
     fi
-    if [[ $base == "transcript" ]]; then
+    if [[ $base == "transcripts" ]]; then
 	continue
     fi
     ffmpeg-normalize $f -nt rms -o tmp/$base.wav
