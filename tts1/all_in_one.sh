@@ -27,7 +27,8 @@ echo "<<<<<<<<<< Data Processing, dump data >>>>>>>>>>"
     --cleaner null \
     --stage 2 \
     --stop-stage 5 \
-    --expdir ${expdir}
+    --expdir ${expdir} \
+    "$@"
 
 echo "<<<<<<<<<< Download Pretrained KSS Model >>>>>>>>>>"
 # setup pretrained_model
@@ -52,5 +53,6 @@ echo "<<<<<<<<<< Start Finetuning >>>>>>>>>>"
     --train_args "--init_param downloads/imdanboy--kss_tts_train_jets_raw_phn_null_g2pk_train.total_count.ave.main.b059fd8f0fefd7c779cdca610fd29ab7cab692cf/exp/tts_train_jets_raw_phn_null_g2pk/train.total_count.ave_5best.pth:tts:tts" \
     --tag finetune_jets_raw_phn_null_g2pk \
     --inference_model train.total_count.best.pth \
-    --expdir ${expdir}
+    --expdir ${expdir} \
+    "$@"
 
