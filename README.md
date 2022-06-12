@@ -6,7 +6,19 @@ kr-custom-tts는 한국어 TTS 모델을 만들기 위한 프로젝트입니다.
 
 녹음을 위한 문장은 [KSS 데이터셋](https://www.kaggle.com/datasets/bryanpark/korean-single-speaker-speech-dataset)과 [카이스트 오디오북 데이터셋](https://aihub.or.kr/opendata/kaist-audiobook)의 일부를 사용하고 있습니다.
 
-음성 데이터의 녹음은 Recording.ipynb를 사용해서 진행해주세요.
+학습을 진행하기 위해서는 먼저 녹음이 필요합니다. 이를 위해 jupyter notebook을 사용하여 Recording.ipynb를 녹음을 진행하실 수도 있습니다. 
+
+Recording.ipynb를 사용하지 않고 녹음을 진행하실 경우 `org/transcripts.txt`를 참고하셔서 녹음을 진행하신 뒤 org 폴더 안에 음성 파일들을 저장해주세요. `org/transcripts.txt`는 다음과 같은 형식을 취하고 있습니다.
+
+```
+파일이름1|문장1
+파일이름2|문장2
+.
+.
+.
+```
+
+파일이름과 문장의 짝을 잘 맞춰서 org 폴더 내에 음성파일을 저장해주세요. 그 뒤 학습에 대한 방법은 [학습 가이드](https://github.com/seastar105/kr-custom-tts/blob/main/Train_Guide.md)를 봐주세요.
 
 사용하는 라이브러리
 - [ESPNet](https://github.com/espnet/espnet)
