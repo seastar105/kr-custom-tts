@@ -6,32 +6,11 @@ kr-custom-tts는 한국어 TTS 모델을 만들기 위한 프로젝트입니다.
 
 녹음을 위한 문장은 [KSS 데이터셋](https://www.kaggle.com/datasets/bryanpark/korean-single-speaker-speech-dataset)과 [카이스트 오디오북 데이터셋](https://aihub.or.kr/opendata/kaist-audiobook)의 일부를 사용하고 있습니다.
 
-
-```
-org
-├── 00000.wav
-├── 00001.wav
-├── 00002.wav
-├── 00003.wav
-├── 00004.wav
-├── 00005.wav
-├── 00006.wav
-├── 00007.wav
-..
-..
-..
-├── 00290.wav
-├── 00291.wav
-├── 00292.wav
-├── 00293.wav
-├── 00294.wav
-├── 00295.wav
-├── spk_id
-└── transcripts.txt
-```
+음성 데이터의 녹음은 Recording.ipynb를 사용해서 진행해주세요.
 
 사용하는 라이브러리
-
 - [ESPNet](https://github.com/espnet/espnet)
+- [ffmpeg](https://ffmpeg.org/)
 - [ffmpeg-normalize](https://github.com/slhck/ffmpeg-normalize)
 - [g2pk](https://github.com/Kyubyong/g2pK)
+- [ipywebrtc](https://github.com/maartenbreddels/ipywebrtc)
