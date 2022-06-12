@@ -39,7 +39,7 @@ Google Colab을 이용하는 경우 Google Drive의 최상위 디렉토리에 or
 
 ## Docker
 
-학습을 수행할 수 있는 GPU 머신이 있으면 docker를 사용한 학습도 가능합니다. 이를 위해서는 아래 프로그램들이 설치되어 있어야 합니다.
+학습을 수행할 수 있는 GPU 머신이 있거나 클라우드에서 빌려서 사용할 경우 docker를 사용한 학습도 가능합니다. 이를 위해서는 아래 프로그램들이 설치되어 있어야 합니다.
 
 - [docker](https://www.docker.com/)
 - [nvidia docker](https://github.com/NVIDIA/nvidia-docker)
