@@ -70,3 +70,12 @@ Weights&Biases를 통해 로그를 확인하실 수도 있습니다. 이 경우 
 cd /root/espnet/finetune/tts1 && ./all_in_one.sh --train_args "--use_wandb true --wandb_entity [wandb 계정] --wandb_project [프로젝트 이름]"
 ```
 
+
+
+
+
+### 중간에 오류가 발생하여 학습이 취소된 경우
+
+#### Out of Memory 에러 발생 시
+
+GPU의 메모리가 부족하여 Out of Memory 에러가 발생할 수 있습니다. 이 경우 `tts1/conf/tuning/finetune_jets.yaml`에서 `batch_bins`를 줄이신 뒤에 `exp/tts_finetune_jets_raw_phn_null_g2pk/run.sh`를 실행하여 다시 학습을 시작할 수 있습니다.
