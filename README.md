@@ -23,10 +23,7 @@ Recording.ipynb를 사용하지 않고 녹음을 진행하실 경우 `org/transc
 
 만약, 자체적으로 모은 데이터가 있다면 `org`폴더 안에 음성파일들을 넣은 뒤, transcripts.txt를 형식에 맞게 수정해주세요. 그러면 해당 데이터만으로도 학습이 가능합니다. 
 
-아래는 제 목소리로 훈련시킨 모델로 합성한 목소리 샘플입니다.
-
-
-https://user-images.githubusercontent.com/30820469/173241162-f0f9c86e-8ced-44da-8666-cd438b34df1a.mp4
+아래는 제 목소리로 훈련시킨 모델로 합성한 목소리 샘플은 [여기](https://seastar105.github.io)에서 확인해주세요.
 
 
 사용하는 라이브러리
