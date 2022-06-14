@@ -67,7 +67,7 @@ cd /root/espnet/finetune/tts1 && ./all_in_one.sh
 Weights&Biases를 통해 로그를 확인하실 수도 있습니다. 이 경우 컨테이너 안에서 `wandb login`을 실행하여 api key를 등록한 학습을 아래와 같은 커맨드로 실행해주시면 됩니다.
 
 ```
-cd /root/espnet/finetune/tts1 && ./all_in_one.sh --train_args "--use_wandb true --wandb_entity [wandb 계정] --wandb_project [프로젝트 이름]"
+cd /root/espnet/finetune/tts1 && ./all_in_one.sh --train_args "--init_param downloads/imdanboy--kss_tts_train_jets_raw_phn_null_g2pk_train.total_count.ave.main.b059fd8f0fefd7c779cdca610fd29ab7cab692cf/exp/tts_train_jets_raw_phn_null_g2pk/train.total_count.ave_5best.pth:tts:tts --use_wandb true --wandb_entity [wandb 계정] --wandb_project [프로젝트 이름]"
 ```
 
 
