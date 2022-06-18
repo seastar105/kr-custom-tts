@@ -2,10 +2,12 @@
 # is truely end-to-end text-to-waveform model. To run
 # this config, you need to specify "--tts_task gan_tts"
 # option for tts.sh at least and use 24000 hz audio as
-# the training data (mainly tested on LJspeech).
-# This configuration tested on 4 GPUs (V100) with 32GB GPU
-# memory. It takes around 2 weeks to finish the training
-# but 100k iters model should generate reasonable results.
+# the training data.
+# This configuration tested on Google Colab (P100) with 
+# 16GB GPU memory. It takes around 2 days to finish the 
+# finetuning. It may have not good quality. If you want
+# better quality, use bigger batch (e.g batch_bins:2000000)
+# with bigger GPU memory.
 
 ##########################################################
 #                  TTS MODEL SETTING                     #
@@ -161,20 +163,18 @@ energy_normalize: global_mvn # normalizer for the energy feature
 #            OPTIMIZER & SCHEDULER SETTING               #
 ##########################################################
 # optimizer setting for generator
-optim: adamw
+optim: adam
 optim_conf:
-    lr: 1.0e-4
-    betas: [0.8, 0.99]
+    lr: 2.0e-4
     eps: 1.0e-9
     weight_decay: 0.0
 scheduler: exponentiallr
 scheduler_conf:
     gamma: 0.999875
 # optimizer setting for discriminator
-optim2: adamw
+optim2: adam
 optim2_conf:
-    lr: 1.0e-4
-    betas: [0.8, 0.99]
+    lr: 2.0e-4
     eps: 1.0e-9
     weight_decay: 0.0
 scheduler2: exponentiallr
