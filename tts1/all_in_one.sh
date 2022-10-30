@@ -50,7 +50,7 @@ echo "<<<<<<<<<< Start Finetuning >>>>>>>>>>"
     --g2p g2pk \
     --cleaner null \
     --stage 6 \
-    --train_args "--init_param downloads/imdanboy--kss_tts_train_jets_raw_phn_null_g2pk_train.total_count.ave.main.b059fd8f0fefd7c779cdca610fd29ab7cab692cf/exp/tts_train_jets_raw_phn_null_g2pk/train.total_count.ave_5best.pth:tts:tts" \
+    --train_args "--init_param downloads/models--imdanboy--kss_tts_train_jets_raw_phn_null_g2pk_train.total_count.ave/snapshots/b059fd8f0fefd7c779cdca610fd29ab7cab692cf/exp/tts_train_jets_raw_phn_null_g2pk/train.total_count.ave_5best.pth:tts:tts" \
     --tag finetune_jets_raw_phn_null_g2pk \
     --inference_model train.total_count.best.pth \
     --expdir ${expdir} \
