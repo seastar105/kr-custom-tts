@@ -25,6 +25,9 @@ Recording.ipynb를 사용하지 않고 녹음을 진행하실 경우 `org/transc
 
 아래는 제 목소리로 훈련시킨 모델로 합성한 목소리 샘플은 [여기](https://seastar105.github.io)에서 확인해주세요.
 
+# Appreciation
+
+- ESPNet의 설치 방식 변경으로 Google Colab 환경에서 학습이 돌아가지 않던 문제 수정 @doh0106
 
 사용하는 라이브러리
 - [ESPNet](https://github.com/espnet/espnet)
